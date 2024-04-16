@@ -12,10 +12,6 @@ public class UIManager : MonoBehaviour
     {
        go.SetActive(!go.activeSelf);
     }
-    public void ToggleInventory()
-    {
-        ToggleGameObject(inventory);
-    }
     public void ToggleFood()
     {
         ToggleGameObject(food);
