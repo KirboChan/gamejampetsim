@@ -8,6 +8,7 @@ public class GridElement : MonoBehaviour
     [SerializeField] FoodSO foodType;
     [SerializeField] Pet inGamePet;
     [SerializeField] TMP_Text itemName;
+    [SerializeField] TMP_Text itemCost;
     [SerializeField] Image portrait;
     public void FoodSelect()
     {
@@ -23,6 +24,7 @@ public class GridElement : MonoBehaviour
     {
         itemName.text = foodType.name;
         portrait.sprite = foodType.foodImage;
+        itemCost.text = $"Cost: {foodType.price}";
 
     }
 }
