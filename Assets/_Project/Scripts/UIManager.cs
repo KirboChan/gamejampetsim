@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -19,5 +18,13 @@ public class UIManager : MonoBehaviour
     public void ToggleShop()
     {
         ToggleGameObject(shop);
+    }
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene("MainGame");
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

@@ -1,11 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Pet : MonoBehaviour
 {
+    [SerializeField] GameObject gameoverScreen;
     [SerializeField] float secondsPerDegradationTick;
     [SerializeField] float hungerDegradationRate;
     [SerializeField] float boredomDegradationRate;
@@ -22,8 +22,12 @@ public class Pet : MonoBehaviour
     {
         ChangeStatValue(ref hunger, hungerBar, -hungerDegradationRate);
         yield return new WaitForSeconds(secondsPerDegradationTick);
-        if(hungerBar.value > 0) StartCoroutine(DegradeHunger());
-        else hungerBar.value = 0;
+        if (hungerBar.value > 0) StartCoroutine(DegradeHunger());
+        else
+        {
+            gameoverScreen.gameObject.SetActive(true);
+            hungerBar.value = 0;
+        }
     }
     IEnumerator DegradeBoredom()
     {
