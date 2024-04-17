@@ -10,6 +10,7 @@ public class Pet : MonoBehaviour
     [SerializeField] float hungerDegradationRate;
     [SerializeField] float boredomDegradationRate;
     [SerializeField] float boredomIncreaseRate;
+    public SpriteRenderer hat;
     public TMP_Text moneyText;
     public Slider hungerBar;
     public Slider boredomBar;
