@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd989ec566e87e44697f5323c9a87bd7, type: 3}
   m_Name: Tophat
   m_EditorClassIdentifier: 
-  price: 5
+  price: 500
   graphic: {fileID: 21300000, guid: a6caa0451378d904694d7b816a6a33c7, type: 3}

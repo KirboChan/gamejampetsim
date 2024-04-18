@@ -3312,8 +3312,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 28229644}
     - target: {fileID: 591036778201206419, guid: 583351aca0de87e42915fb0dbc3dd5fc, type: 3}
+      propertyPath: boredomIncreaseRate
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 591036778201206419, guid: 583351aca0de87e42915fb0dbc3dd5fc, type: 3}
       propertyPath: hungerDegradationRate
-      value: 0.002
+      value: 0.0019
       objectReference: {fileID: 0}
     - target: {fileID: 2832561692855849692, guid: 583351aca0de87e42915fb0dbc3dd5fc, type: 3}
       propertyPath: m_Name
