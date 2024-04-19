@@ -19,6 +19,7 @@ public class Pet : MonoBehaviour
     public float boredom;
     public int money;
     [SerializeField] AudioManager audioManager;
+    Animator animator;
 
     IEnumerator DegradeHunger()
     {
@@ -45,6 +46,7 @@ public class Pet : MonoBehaviour
         StartCoroutine(DegradeHunger());
         StartCoroutine(DegradeBoredom());
         audioManager = GameObject.Find("_Scripts").GetComponent<AudioManager>();
+        animator = gameObject.GetComponentInChildren<Animator>();
 
     }
     public void OnMouseDown()
@@ -52,6 +54,7 @@ public class Pet : MonoBehaviour
         ChangeStatValue(ref boredom, boredomBar, boredomIncreaseRate);
         ChangeStatValue(ref money, 5, moneyText);
         audioManager.PlaySFX(audioManager.audioSource, audioManager.randomAudioClips, 4);
+        animator.Play("Idle");
     }
 
     public void ChangeStatValue(ref float stat , Slider bar , float amount)
