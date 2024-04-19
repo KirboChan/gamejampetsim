@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66ee8912d5883b54baee7a734267d87e, type: 3}
   m_Name: Seeds
   m_EditorClassIdentifier: 
-  foodName: Seeds
+  foodName: Seed
   price: 50
-  healAmount: 2.1
-  foodImage: {fileID: 21300000, guid: 29ae364a8950fc64db96e8b05137cf3e, type: 3}
+  healAmount: 5
+  foodImage: {fileID: 21300000, guid: 8e3be118d8a95ff47a92f3ae06769f1a, type: 3}

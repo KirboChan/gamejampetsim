@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66ee8912d5883b54baee7a734267d87e, type: 3}
-  m_Name: Fish
+  m_Script: {fileID: 11500000, guid: fd989ec566e87e44697f5323c9a87bd7, type: 3}
+  m_Name: StrawHat
   m_EditorClassIdentifier: 
-  foodName: BowlOFish
-  price: 500
-  healAmount: 100
-  foodImage: {fileID: 21300000, guid: fc677774a6150e8469c0d1b277544d31, type: 3}
+  price: 250
+  graphic: {fileID: 21300000, guid: 672b701ceb92a854b9632e4ba5d2b516, type: 3}

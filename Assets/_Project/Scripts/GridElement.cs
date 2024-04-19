@@ -27,6 +27,7 @@ public class GridElement : MonoBehaviour
         {
             inGamePet.ChangeStatValue(ref inGamePet.money, -hatType.price, inGamePet.moneyText);
             inGamePet.hat.sprite = hatType.graphic;
+            audioManager.PlaySFX(audioManager.audioSource, audioManager.randomAudioClips, 3);
         }
         
     }

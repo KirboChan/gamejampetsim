@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66ee8912d5883b54baee7a734267d87e, type: 3}
-  m_Name: Fish
+  m_Name: New Food Type
   m_EditorClassIdentifier: 
-  foodName: BowlOFish
-  price: 500
-  healAmount: 100
-  foodImage: {fileID: 21300000, guid: fc677774a6150e8469c0d1b277544d31, type: 3}
+  foodName: Water
+  price: 5
+  healAmount: 1
+  foodImage: {fileID: 21300000, guid: 7667e376072c7c7409a86cd68f8b77c1, type: 3}
