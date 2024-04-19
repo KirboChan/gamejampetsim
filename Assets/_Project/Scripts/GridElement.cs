@@ -10,13 +10,14 @@ public class GridElement : MonoBehaviour
     [SerializeField] TMP_Text itemName;
     [SerializeField] TMP_Text itemCost;
     [SerializeField] Image portrait;
+    [SerializeField] AudioManager audioManager;
     public void FoodSelect()
     {
         if (inGamePet.money >= foodType.price)
         {
             inGamePet.ChangeStatValue(ref inGamePet.money, -foodType.price, inGamePet.moneyText);
             inGamePet.ChangeStatValue(ref inGamePet.hunger, inGamePet.hungerBar, (foodType.healAmount * 0.01f));
-            AudioManager.instance.PlaySFX(AudioManager.instance.audioSource, AudioManager.instance.randomAudioClips, 0);
+            audioManager.PlaySFX(audioManager.audioSource, audioManager.randomAudioClips, 0);
         }
     }
 
@@ -31,7 +32,9 @@ public class GridElement : MonoBehaviour
     }
     public void Start()
     {
-        if(foodType != null)
+
+        audioManager = GameObject.Find("_Scripts").GetComponent<AudioManager>();
+        if (foodType != null)
         {
             itemName.text = foodType.name;
             portrait.sprite = foodType.foodImage;

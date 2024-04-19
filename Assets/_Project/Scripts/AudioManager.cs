@@ -21,7 +21,6 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySFX(AudioSource audiosource, AudioClip[] sfxArray, int index)
     {
-        audiosource = audioSource;
         audioSource.clip = sfxArray[index];
         audioSource.Play();
     }
