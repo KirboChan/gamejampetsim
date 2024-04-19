@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] AudioSource audioSource;
-    [SerializeField] AudioClip[] randomAudioClips;
+    public AudioSource audioSource;
+    public AudioClip[] randomAudioClips;
+    public static AudioManager instance;
     float minTime;
     float maxTime;
     float timeToWait;
@@ -20,11 +21,12 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySFX(AudioSource audiosource, AudioClip[] sfxArray, int index)
     {
+        audiosource = audioSource;
         audioSource.clip = sfxArray[index];
         audioSource.Play();
     }
     public void Start()
     {
-        StartCoroutine(PlayRandomSound());
+
     }
 }

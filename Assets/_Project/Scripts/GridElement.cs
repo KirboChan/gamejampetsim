@@ -16,6 +16,7 @@ public class GridElement : MonoBehaviour
         {
             inGamePet.ChangeStatValue(ref inGamePet.money, -foodType.price, inGamePet.moneyText);
             inGamePet.ChangeStatValue(ref inGamePet.hunger, inGamePet.hungerBar, (foodType.healAmount * 0.01f));
+            AudioManager.instance.PlaySFX(AudioManager.instance.audioSource, AudioManager.instance.randomAudioClips, 0);
         }
     }
 
