@@ -18,6 +18,11 @@ public class AudioManager : MonoBehaviour
         StartCoroutine(PlayRandomSound());
     }
 
+    public void PlaySFX(AudioSource audiosource, AudioClip[] sfxArray, int index)
+    {
+        audioSource.clip = sfxArray[index];
+        audioSource.Play();
+    }
     public void Start()
     {
         StartCoroutine(PlayRandomSound());
